@@ -5,10 +5,10 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      time: "02:53"
+      time: "03:10"
 
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
-      time: "02:53"
+      time: "03:10"
