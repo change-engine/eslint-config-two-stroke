@@ -15,7 +15,9 @@ module.exports = {
     project: ["./tsconfig.json"],
   },
   plugins: ["prettier", "@typescript-eslint", "filenames"],
+  ignorePatterns: ["api.d.ts"],
   rules: {
+    "node/no-unpublished-import": "off",
     "node/no-missing-import": "off",
     eqeqeq: ["error"],
     "@typescript-eslint/no-shadow": 2,
@@ -28,8 +30,26 @@ module.exports = {
     ],
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/switch-exhaustiveness-check": "error",
+    "@typescript-eslint/unbound-method": "off",
     "filenames/match-regex": [2, "^[a-z][a-z0-9.-]*$"],
     "filenames/match-exported": [2, "kebab"],
   },
+  overrides: [
+    {
+      files: ["**/*.test.ts", "**/*.test.tsx", "./src/__tests__/**/*.ts"],
+      plugins: ["vitest"],
+      extends: ["plugin:vitest/recommended"],
+      rules: {
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "vitest/no-export": "off",
+        "vitest/expect-expect": "off",
+        "vitest/no-conditional-expect": "off",
+      },
+    },
+  ],
   root: true,
 };
