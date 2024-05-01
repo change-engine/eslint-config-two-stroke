@@ -15,7 +15,7 @@ module.exports = {
     project: ["./tsconfig.json"],
   },
   plugins: ["prettier", "@typescript-eslint", "filenames"],
-  ignorePatterns: ["api.d.ts"],
+  ignorePatterns: ["api.d.ts", "*-definitions.ts"],
   rules: {
     "node/no-unpublished-import": "off",
     "node/no-missing-import": "off",
