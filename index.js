@@ -19,6 +19,7 @@ module.exports = {
   rules: {
     "n/no-unpublished-import": "off",
     "n/no-missing-import": "off",
+    "n/no-unsupported-features/node-builtins": "off",
     eqeqeq: ["error"],
     "@typescript-eslint/no-shadow": 2,
     semi: ["error", "always"],
