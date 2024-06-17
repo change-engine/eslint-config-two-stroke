@@ -2,7 +2,7 @@ module.exports = {
   extends: [
     "prettier",
     "eslint:recommended",
-    "plugin:node/recommended",
+    "plugin:n/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
@@ -17,8 +17,8 @@ module.exports = {
   plugins: ["prettier", "@typescript-eslint", "filenames"],
   ignorePatterns: ["api.d.ts", "*-definitions.ts"],
   rules: {
-    "node/no-unpublished-import": "off",
-    "node/no-missing-import": "off",
+    "n/no-unpublished-import": "off",
+    "n/no-missing-import": "off",
     eqeqeq: ["error"],
     "@typescript-eslint/no-shadow": 2,
     semi: ["error", "always"],
