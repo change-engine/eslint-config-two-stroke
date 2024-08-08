@@ -1,56 +1,56 @@
-module.exports = {
-  extends: [
-    "prettier",
-    "eslint:recommended",
-    "plugin:n/recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:deprecation/recommended",
-  ],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    ecmaVersion: 2021,
-    sourceType: "module",
-    project: ["./tsconfig.json"],
+import typescriptEslint from "typescript-eslint";
+import vitest from "eslint-plugin-vitest";
+import nodePlugin from "eslint-plugin-n";
+import deprecationPlugin from "eslint-plugin-deprecation";
+import js from "@eslint/js";
+import { fixupPluginRules, fixupConfigRules } from "@eslint/compat";
+import eslintConfigPrettier from "eslint-config-prettier";
+
+export default [
+  js.configs.recommended,
+  ...typescriptEslint.configs.recommended,
+  ...typescriptEslint.configs.recommendedTypeChecked,
+  nodePlugin.configs["flat/recommended-module"],
+  ...fixupConfigRules({
+    ...deprecationPlugin.configs.recommended,
+    plugins: { ["deprecation"]: fixupPluginRules(deprecationPlugin) },
+  }),
+  {
+    ignores: ["dist", ".wrangler", "**/api.d.ts", "**/*-definitions.ts"],
   },
-  plugins: ["prettier", "@typescript-eslint", "filenames"],
-  ignorePatterns: ["api.d.ts", "*-definitions.ts"],
-  rules: {
-    "n/no-unpublished-import": "off",
-    "n/no-missing-import": "off",
-    "n/no-unsupported-features/node-builtins": "off",
-    eqeqeq: ["error"],
-    "@typescript-eslint/no-shadow": 2,
-    semi: ["error", "always"],
-    "prettier/prettier": [
-      "error",
-      {
-        endOfLine: "auto",
-      },
-    ],
-    "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/switch-exhaustiveness-check": "error",
-    "@typescript-eslint/unbound-method": "off",
-    "filenames/match-regex": [2, "^[a-z][a-z0-9.-]*$"],
-    "filenames/match-exported": [2, "kebab"],
-  },
-  overrides: [
-    {
-      files: ["**/*.test.ts", "**/*.test.tsx", "./src/__tests__/**/*.ts"],
-      plugins: ["vitest"],
-      extends: ["plugin:vitest/recommended"],
-      rules: {
-        "@typescript-eslint/no-unsafe-assignment": "off",
-        "@typescript-eslint/no-unsafe-member-access": "off",
-        "@typescript-eslint/no-explicit-any": "off",
-        "@typescript-eslint/no-non-null-assertion": "off",
-        "@typescript-eslint/ban-ts-comment": "off",
-        "vitest/no-export": "off",
-        "vitest/expect-expect": "off",
-        "vitest/no-conditional-expect": "off",
+  {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
       },
     },
-  ],
-  root: true,
-};
+    rules: {
+      "n/no-unpublished-import": "off",
+      "n/no-missing-import": "off",
+      "n/no-unsupported-features/node-builtins": "off",
+      eqeqeq: ["error"],
+      "@typescript-eslint/no-shadow": 2,
+      semi: ["error", "always"],
+      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/switch-exhaustiveness-check": "error",
+      "@typescript-eslint/unbound-method": "off",
+    },
+  },
+  {
+    files: ["**/*.test.ts", "**/*.test.tsx", "./src/__tests__/**/*.ts"],
+    ...vitest.configs.recommended,
+    rules: {
+      ...vitest.configs.recommended.rules,
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
+      "vitest/no-export": "off",
+      "vitest/expect-expect": "off",
+      "vitest/no-conditional-expect": "off",
+    },
+  },
+  eslintConfigPrettier,
+];
