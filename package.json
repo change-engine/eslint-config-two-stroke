@@ -2,10 +2,11 @@
   "name": "eslint-config-two-stroke",
   "description": "eslint settings for two-stroke.",
   "license": "MIT",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "index.js",
   "dependencies": {
     "@eslint/compat": "^1.1.1",
+    "@eslint/js": "^9.8.0",
     "@typescript-eslint/eslint-plugin": "^8.0.1",
     "@typescript-eslint/parser": "^8.0.1",
     "eslint-config-prettier": "^9.1.0",

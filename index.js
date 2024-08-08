@@ -7,12 +7,16 @@ import { fixupPluginRules, fixupConfigRules } from "@eslint/compat";
 import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   js.configs.recommended,
   ...typescriptEslint.configs.recommended,
   ...typescriptEslint.configs.recommendedTypeChecked,
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   nodePlugin.configs["flat/recommended-module"],
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   ...fixupConfigRules({
     ...deprecationPlugin.configs.recommended,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     plugins: { ["deprecation"]: fixupPluginRules(deprecationPlugin) },
   }),
   {
@@ -22,6 +26,7 @@ export default [
     languageOptions: {
       parserOptions: {
         projectService: true,
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         tsconfigRootDir: import.meta.dirname,
       },
     },
