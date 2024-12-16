@@ -7,7 +7,6 @@ import { fixupPluginRules, fixupConfigRules } from "@eslint/compat";
 import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   js.configs.recommended,
   ...typescriptEslint.configs.recommended,
   ...typescriptEslint.configs.recommendedTypeChecked,
