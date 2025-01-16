@@ -9,7 +9,7 @@
     "@eslint/js": "^9.17.0",
     "@typescript-eslint/eslint-plugin": "^8.18.1",
     "@typescript-eslint/parser": "^8.18.1",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-prettier": "^10.0.1",
     "eslint-config-typescript": "^3.0.0",
     "eslint-plugin-deprecation": "^3.0.0",
     "eslint-plugin-n": "^17.15.0",
