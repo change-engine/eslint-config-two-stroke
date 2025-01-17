@@ -2,29 +2,29 @@
   "name": "eslint-config-two-stroke",
   "description": "eslint settings for two-stroke.",
   "license": "MIT",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "main": "index.js",
   "dependencies": {
-    "@eslint/compat": "^1.2.4",
-    "@eslint/js": "^9.17.0",
-    "@typescript-eslint/eslint-plugin": "^8.18.1",
-    "@typescript-eslint/parser": "^8.18.1",
-    "eslint-config-prettier": "^9.1.0",
+    "@eslint/compat": "^1.2.5",
+    "@eslint/js": "^9.18.0",
+    "@typescript-eslint/eslint-plugin": "^8.20.0",
+    "@typescript-eslint/parser": "^8.20.0",
+    "eslint-config-prettier": "^10.0.1",
     "eslint-config-typescript": "^3.0.0",
     "eslint-plugin-deprecation": "^3.0.0",
-    "eslint-plugin-n": "^17.15.0",
-    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-n": "^17.15.1",
+    "eslint-plugin-prettier": "^5.2.2",
     "eslint-plugin-vitest": "^0.5.4",
-    "typescript-eslint": "^8.18.1"
+    "typescript-eslint": "^8.20.0"
   },
   "packageManager": "yarn@4.3.0",
   "prettier": {
     "printWidth": 80
   },
   "devDependencies": {
-    "eslint": "^9.17.0",
+    "eslint": "^9.18.0",
     "prettier": "^3.4.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.3"
   },
   "peerDependencies": {
     "eslint": ">=9",
