@@ -2,31 +2,31 @@
   "name": "eslint-config-two-stroke",
   "description": "eslint settings for two-stroke.",
   "license": "MIT",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "main": "index.js",
   "dependencies": {
     "@eslint/compat": "^1.2.7",
-    "@eslint/js": "^9.21.0",
-    "@typescript-eslint/eslint-plugin": "^8.25.0",
-    "@typescript-eslint/parser": "^8.25.0",
-    "eslint-config-prettier": "^10.0.2",
+    "@eslint/js": "^9.22.0",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
+    "eslint-config-prettier": "^10.1.1",
     "eslint-config-typescript": "^3.0.0",
     "eslint-plugin-deprecation": "^3.0.0",
-    "eslint-plugin-n": "^17.16.1",
+    "eslint-plugin-n": "^17.16.2",
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-vitest": "^0.5.4",
-    "typescript-eslint": "^8.25.0"
+    "typescript-eslint": "^8.26.1"
   },
   "packageManager": "yarn@4.3.0",
   "prettier": {
     "printWidth": 80
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250224.0",
-    "eslint": "^9.21.0",
+    "@cloudflare/workers-types": "^4.20250313.0",
+    "eslint": "^9.22.0",
     "prettier": "^3.5.3",
     "typescript": "^5.8.2",
-    "vitest": "^3.0.7"
+    "vitest": "^3.0.8"
   },
   "peerDependencies": {
     "eslint": ">=9",
