@@ -5,7 +5,7 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@cloudflare/workers-types@npm:^4.20250601.0":
+"@cloudflare/workers-types@npm:^4.20250603.0":
   version: 4.20250603.0
   resolution: "@cloudflare/workers-types@npm:4.20250603.0"
   checksum: 10c0/686d95ead514d9ed42a4fb7b2d4d399a5f9dfb157f4b94a706e5c5f031954297754ebdfde4b9b414182f47709fee14a0c3d665a977ccfff4d24fc6eff1b93bca
@@ -586,7 +586,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:8.33.1, @typescript-eslint/eslint-plugin@npm:^8.33.0":
+"@typescript-eslint/eslint-plugin@npm:8.33.1, @typescript-eslint/eslint-plugin@npm:^8.33.1":
   version: 8.33.1
   resolution: "@typescript-eslint/eslint-plugin@npm:8.33.1"
   dependencies:
@@ -607,7 +607,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:8.33.1, @typescript-eslint/parser@npm:^8.33.0":
+"@typescript-eslint/parser@npm:8.33.1, @typescript-eslint/parser@npm:^8.33.1":
   version: 8.33.1
   resolution: "@typescript-eslint/parser@npm:8.33.1"
   dependencies:
@@ -1314,22 +1314,22 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "eslint-config-two-stroke@workspace:."
   dependencies:
-    "@cloudflare/workers-types": "npm:^4.20250601.0"
+    "@cloudflare/workers-types": "npm:^4.20250603.0"
     "@eslint/compat": "npm:^1.2.9"
     "@eslint/js": "npm:^9.28.0"
-    "@typescript-eslint/eslint-plugin": "npm:^8.33.0"
-    "@typescript-eslint/parser": "npm:^8.33.0"
+    "@typescript-eslint/eslint-plugin": "npm:^8.33.1"
+    "@typescript-eslint/parser": "npm:^8.33.1"
     eslint: "npm:^9.28.0"
     eslint-config-prettier: "npm:^10.1.5"
     eslint-config-typescript: "npm:^3.0.0"
     eslint-plugin-deprecation: "npm:^3.0.0"
-    eslint-plugin-n: "npm:^17.18.0"
+    eslint-plugin-n: "npm:^17.19.0"
     eslint-plugin-prettier: "npm:^5.4.1"
     eslint-plugin-vitest: "npm:^0.5.4"
     prettier: "npm:^3.5.3"
     typescript: "npm:^5.8.3"
-    typescript-eslint: "npm:^8.33.0"
-    vitest: "npm:^3.1.4"
+    typescript-eslint: "npm:^8.33.1"
+    vitest: "npm:^3.2.0"
   peerDependencies:
     eslint: ">=9"
     prettier: ">=3"
@@ -1375,7 +1375,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-n@npm:^17.18.0":
+"eslint-plugin-n@npm:^17.19.0":
   version: 17.19.0
   resolution: "eslint-plugin-n@npm:17.19.0"
   dependencies:
@@ -2843,7 +2843,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-eslint@npm:^8.33.0":
+"typescript-eslint@npm:^8.33.1":
   version: 8.33.1
   resolution: "typescript-eslint@npm:8.33.1"
   dependencies:
@@ -2974,7 +2974,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitest@npm:^3.1.4":
+"vitest@npm:^3.2.0":
   version: 3.2.0
   resolution: "vitest@npm:3.2.0"
   dependencies:
