@@ -1,32 +1,24 @@
 import typescriptEslint from "typescript-eslint";
 import vitest from "eslint-plugin-vitest";
 import nodePlugin from "eslint-plugin-n";
-import deprecationPlugin from "eslint-plugin-deprecation";
 import js from "@eslint/js";
-import { fixupPluginRules, fixupConfigRules } from "@eslint/compat";
 import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
   js.configs.recommended,
-  ...typescriptEslint.configs.recommended,
-  ...typescriptEslint.configs.recommendedTypeChecked,
   nodePlugin.configs["flat/recommended-module"],
-  ...fixupConfigRules({
-    ...deprecationPlugin.configs.recommended,
-    plugins: { ["deprecation"]: fixupPluginRules(deprecationPlugin) },
-  }),
+  ...typescriptEslint.configs.recommendedTypeChecked.map((conf) => ({
+    ...conf,
+    files: ["**/*.ts", "**/*.tsx"],
+  })),
   {
     ignores: ["dist", ".wrangler", "**/api.d.ts", "**/*-definitions.ts"],
   },
   {
-    files: ["**/*.mjs", "**/*.js"],
-    ...typescriptEslint.configs.disableTypeChecked,
-  },
-  {
+    files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parserOptions: {
         projectService: true,
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         tsconfigRootDir: import.meta.dirname,
       },
     },
@@ -39,6 +31,7 @@ export default [
       semi: ["error", "always"],
       "@typescript-eslint/no-unused-vars": "error",
       "@typescript-eslint/switch-exhaustiveness-check": "error",
+      "@typescript-eslint/no-deprecated": "error",
       "@typescript-eslint/unbound-method": "off",
     },
   },
