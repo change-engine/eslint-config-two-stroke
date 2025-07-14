@@ -19,6 +19,10 @@ export default [
     ignores: ["dist", ".wrangler", "**/api.d.ts", "**/*-definitions.ts"],
   },
   {
+    files: ["**/*.mjs", "**/*.js"],
+    ...typescriptEslint.configs.disableTypeChecked,
+  },
+  {
     languageOptions: {
       parserOptions: {
         projectService: true,
