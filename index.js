@@ -22,6 +22,11 @@ export default [
         tsconfigRootDir: import.meta.dirname,
       },
     },
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
     rules: {
       "n/no-unpublished-import": "off",
       "n/no-missing-import": "off",
