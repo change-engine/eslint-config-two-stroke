@@ -6,9 +6,9 @@ __metadata:
   cacheKey: 10c0
 
 "@cloudflare/workers-types@npm:^4.20250819.0":
-  version: 4.20250903.0
-  resolution: "@cloudflare/workers-types@npm:4.20250903.0"
-  checksum: 10c0/5af01d25c7153407dfcf8172a00a29e3dcb3fcd2d9b5ea64299497652a95410c8bb91bc786f94d055e219e14581b18550d020a0af1dfddfffb996f6a57085793
+  version: 4.20250904.0
+  resolution: "@cloudflare/workers-types@npm:4.20250904.0"
+  checksum: 10c0/aac275d7774f5061ef1fa7adbfc5c47b1f92da7ca6876e0a2d0d9b534d759e137688173dd118366407b4a727061b4dc2428055e9e430b728876af8d6746d7bf0
   languageName: node
   linkType: hard
 
