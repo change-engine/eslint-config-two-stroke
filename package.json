@@ -2,7 +2,7 @@
   "name": "eslint-config-two-stroke",
   "description": "eslint settings for two-stroke.",
   "license": "MIT",
-  "version": "1.2.13",
+  "version": "1.2.14",
   "main": "index.js",
   "dependencies": {
     "@eslint/compat": "^1.4.0",
@@ -25,7 +25,7 @@
     "eslint": "^9.38.0",
     "prettier": "^3.6.2",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.1"
+    "vitest": "<4"
   },
   "peerDependencies": {
     "eslint": ">=9",
