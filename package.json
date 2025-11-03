@@ -2,11 +2,11 @@
   "name": "eslint-config-two-stroke",
   "description": "eslint settings for two-stroke.",
   "license": "MIT",
-  "version": "1.2.14",
+  "version": "1.2.15",
   "main": "index.js",
   "dependencies": {
-    "@eslint/compat": "^1.4.0",
-    "@eslint/js": "^9.38.0",
+    "@eslint/compat": "^1.4.1",
+    "@eslint/js": "^9.39.0",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
     "eslint-config-prettier": "^10.1.8",
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20251014.0",
-    "eslint": "^9.38.0",
+    "eslint": "^9.39.0",
     "prettier": "^3.6.2",
     "typescript": "^5.9.3",
     "vitest": "<4"
