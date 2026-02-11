@@ -2,7 +2,7 @@
   "name": "eslint-config-two-stroke",
   "description": "eslint settings for two-stroke.",
   "license": "MIT",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "main": "index.js",
   "dependencies": {
     "@eslint/compat": "^2.0.2",
