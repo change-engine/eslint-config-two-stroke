@@ -1,5 +1,4 @@
 import typescriptEslint from "typescript-eslint";
-import vitest from "eslint-plugin-vitest";
 import nodePlugin from "eslint-plugin-n";
 import js from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
@@ -42,17 +41,12 @@ export default [
   },
   {
     files: ["**/*.test.ts", "**/*.test.tsx", "./src/__tests__/**/*.ts"],
-    ...vitest.configs.recommended,
     rules: {
-      ...vitest.configs.recommended.rules,
       "@typescript-eslint/no-unsafe-assignment": "off",
       "@typescript-eslint/no-unsafe-member-access": "off",
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-non-null-assertion": "off",
       "@typescript-eslint/ban-ts-comment": "off",
-      "vitest/no-export": "off",
-      "vitest/expect-expect": "off",
-      "vitest/no-conditional-expect": "off",
     },
   },
   eslintConfigPrettier,
