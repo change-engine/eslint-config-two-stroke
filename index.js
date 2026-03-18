@@ -11,7 +11,7 @@ export default [
     files: ["**/*.ts", "**/*.tsx"],
   })),
   {
-    ignores: ["dist", ".wrangler", "**/api.d.ts", "**/*-definitions.ts"],
+    ignores: ["worker-configuration.d.ts", "dist", ".wrangler", "**/api.d.ts", "**/*-definitions.ts"],
   },
   {
     files: ["**/*.ts", "**/*.tsx"],
