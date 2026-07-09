@@ -15,6 +15,7 @@ export default [
       "worker-configuration.d.ts",
       "dist",
       ".wrangler",
+      "vitest.config.ts",
       "**/api.d.ts",
       "**/*-definitions.ts",
     ],
