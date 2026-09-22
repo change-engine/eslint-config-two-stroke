@@ -12,3 +12,5 @@ updates:
     schedule:
       interval: "daily"
       time: "03:10"
+    ignore:
+      - dependency-name: "wrangler"
